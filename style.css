@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    text-align: left;
+    padding-top: 10px;
+    background-color: rgb(5, 81, 245);
+}
+
+/* section:nth-child(odd) {
+    background-color: skyblue;
+} */
+
+.wrapper {
+    padding-top: 55px;
+    max-width: 1200px;
+    margin: 80px;
+}
+
+h1 {
+    color: rgb(255, 0, 0);
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+    color: white;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 200;
+    color: white;
+}
+
+.btns {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.btns .container {
+    position: relative;
+    max-width: 3000px;
+    padding: 20px;
+    margin: auto;
+}
+
+.btns_background {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: .3s;
+}
+
+.btns_background.show {
+    opacity: 0;
+}
+
+.btns_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.btns_menu .btn {
+    font-size: 16px;
+    font-weight: 600;
+    width: 1000px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 20px;
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    background-color: white;
+}
+
+.btns_menu .btn:hover {
+    border: 5px solid rgb(255, 0, 0);
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.arrow-up {
+    z-index: 20;
+    position: fixed;
+    bottom: 60px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .3s;
+}
+
+.arrow-up span {
+    font-size: 50px;
+}
+
+.arrow-up.show {
+    opacity: 1;
+}
+

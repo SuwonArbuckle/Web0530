@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="btns">
+        <div class="container">
+            <div class="btns_menu">
+                <button class="btn about">About</button>
+                <button class="btn beginning">Beginning</button>
+                <button class="btn title">Title</button>
+                <button class="btn copy">Copy</button>
+                <button class="btn brand">Brand</button>
+            </div>
+            <div class="btns_background"></div>
+        </div>
+    </div>
+
+
+    <section id="about">
+        <div class="wrapper">
+            <h1>About</h1>
+            <h2>나에 대하여</h2>
+            <h3>저는 시각디자인을 전공으로 배우고 있는 지망생으로, 그래픽, 브랜드, 편집 디자인이<br>
+                저의 진로입니다. 현재 다양한 레터링 습작들을 인스타그램 계정에 업로드하고 있으며,<br>
+                이 웹사이트는 지금까지 만든 작품들을 모아놓은 아카이브 겸 포트폴리오입니다.<br>
+                추후에 서체 디자인 또한 시작할 예정이니 많은 관심 바랍니다.<br>
+            </h3>
+            <h2>@tg_by_ljh</h2>
+        </div>
+    </section>
+
+    <section id="beginning">
+        <div class="wrapper">
+            <h1>Beginning</h1>
+            <h2>친구 아닌 친구</h2>
+            <h3>힙합 아티스트 기리보이의 곡 <친구 아닌 친구>의 가사를 레터링한 첫 작품입니다.<br>
+                곡의 전체적인 주제인 짝사랑과 추억을 키워드로 디자인을 해보았으나,<br>
+                첫 단추를 잘못 끼운 채로 제작을 한지라 아쉬움이 많이 남는 작품입니다.
+            </h3>
+            <img src="친구아닌친구.png" alt="">
+        </div>
+    </section>
+
+    <section id="title">
+        <div class="wrapper">
+            <h1>Title</h1>
+            <h2>그레네이드</h2>
+            <h3>브루노 마스의 대표곡 <Grenade>의 제목을 한글로 레터링해 보았습니다.<br>
+                곡의 주제인 연인에 대한 배신감을 전체적으로 표현하였는데, 개인적으로도<br>
+                그러한 느낌이 디자인에 잘 녹아들었다고 생각이 듭니다.
+            </h3>
+            <img src="그레네이드.png" alt="">
+        </div>
+    </section>
+
+    <section id="copy">
+        <div class="wrapper">
+            <h1>Copy</h1>
+            <h2>열두시에 만나요</h2>
+            <h3>광고카피를 레터링하는 과제를 받았을 때 어떤 걸로 할까라는 고민이 있었습니다.<br>
+                그러던 중 유명 아이스크림 브랜드 '부라보콘' CM송의 가사를 선정했습니다.<br>
+                이 노래가 1980년 출시 후 처음 광고할 때부터 포크송으로 불렸다는 것을 알고<br>
+                레트로한 감성으로 제작하기로 결정하였습니다.
+            </h3>
+            <img src="부라보콘.png" alt="">
+        </div>
+    </section>
+
+    <section id="brand">
+        <div class="wrapper">
+            <h1>Brand</h1>
+            <h2>파타고니아</h2>
+            <h3>이 작품은 기존의 영문 로고를 한글화하는 과정이었기 때문에 어렵지 않았습니다.<br>
+            </h3>
+            <img src="파타고니아.png" alt="">
+        </div>
+    </section>
+
+    <button class="arrow-up">
+        <span class="material-symbols-outlined">
+            arrow_upward
+        </span>
+    </button>
+
+
+    
+
+
+    <script>
+        const btnAbout = document.querySelector('.about');
+        const sectionAbout = document.querySelector('#about');
+        btnAbout.addEventListener('click', function() {sectionAbout.scrollIntoView({behavior:"smooth", block:"center"});});
+        
+        const btnBeginning = document.querySelector('.beginning');
+        const sectionBeginning = document.querySelector('#beginning');
+        btnBeginning.addEventListener('click', function() {sectionBeginning.scrollIntoView({behavior:"smooth", block:"center"});});
+
+        const btnTitle = document.querySelector('.title');
+        const sectionTitle = document.querySelector('#title');
+        btnTitle.addEventListener('click', function() {sectionTitle.scrollIntoView({behavior:"smooth", block:"center"});});
+
+        const btnCopy = document.querySelector('.copy');
+        const sectionCopy = document.querySelector('#copy');
+        btnCopy.addEventListener('click', function() {sectionCopy.scrollIntoView({behavior:"smooth", block:"center"});});
+        
+        const btnBrand = document.querySelector('.brand');
+        const sectionBrand = document.querySelector('#brand');
+        btnBrand.addEventListener('click', function() {sectionBrand.scrollIntoView({behavior:"smooth", block:"center"});});
+
+        const arrowUp = document.querySelector('.arrow-up');
+        document.addEventListener('scroll', function() {
+            
+            console.log(window.scrollY);
+
+            if (window.scrollY > 300) {
+                arrowUp.classList.add('show');}
+
+            else
+            {arrowUp.classList.remove('show');}
+        })
+
+        const btnsBackground = document.querySelector('.btns_background');
+        document.addEventListener('scroll', function() {
+            
+            console.log(window.scrollY);
+
+            if (window.scrollY > 700) {
+                btnsBackground.classList.remove('show');}
+
+            else
+            {btnsBackground.classList.add('show');}
+        })
+    </script>
+    
+</body>
+</html>
